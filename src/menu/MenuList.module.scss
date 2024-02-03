@@ -1,0 +1,37 @@
+.menu {
+    background-color: #263238;
+    color: rgba(255, 255, 255, 0.5);
+
+    :global(.ant-menu-item-group-list .ant-menu-item) {
+        padding-inline: 28px 16px;
+    }
+
+    :global(.ant-menu-item-group-title) {
+        padding: 12px 20px !important;
+        letter-spacing: 0.05em;
+        pointer-events: none;
+        cursor: default;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .selectedMenu{
+        background-color: var(--bs-sidebar-dark-menu-item-active-bg)!important;
+        color: var(--bs-sidebar-dark-menu-item-active-color)!important;
+    //   color: #1677ff; 
+    //   background-color: #ffffff;   
+    }
+
+}
+
+.dashboardWavesEffect {
+    padding: 20px;
+
+    a {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+}
+
+.width70 {
+    width: 70px;
+}

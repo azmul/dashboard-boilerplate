@@ -1,0 +1,22 @@
+.pageFilter{
+    :global(.ant-form-item) 
+    {
+        margin-bottom: 0px;
+    }
+    :global(.ant-picker){
+        width: 100%;
+    }
+
+}
+.pageFilterWidth{
+    width: 400px;
+
+    :global(.ant-checkbox-group .ant-checkbox-wrapper){
+        width: 170px;
+        margin-bottom: 10px;
+    }
+}
+
+.pageFilterActions{
+    margin: 20px 0px 30px 0px;
+}

@@ -1,0 +1,20 @@
+.daysBlocker{
+    display: flex;
+    margin-bottom: 0;
+    height: 40px;
+    padding: 6px 0px;
+    text-align: start;
+    font-weight: bold;
+    .day{
+        width: 5%;
+    }
+}
+
+.itemTitle{
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.item{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
