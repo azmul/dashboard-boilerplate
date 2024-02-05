@@ -1,8 +1,6 @@
-import * as React from "react";
 import PageFormat from "@/components/page-format/PageFormat";
-
-const TodoTable = React.lazy(() => import("./table/Table"));
-const TodoDrawer = React.lazy(() => import("./drawer/Drawer"));
+import TodoTable from "./table/Table";
+import TodoDrawer from "./drawer/Drawer"
 
 export default function TodoPage() {
   return (

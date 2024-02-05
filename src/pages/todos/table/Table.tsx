@@ -38,6 +38,7 @@ export default function TodoTable() {
       />
 
       <PageFilter status start_at end_at />
+
       <TodoSortableTable
         dataSource={todoData}
         loading={todo.isLoading}
@@ -77,7 +78,7 @@ export default function TodoTable() {
           width={100}
           render={(_, Todo) => (
             <TableActions
-              editPath={`/todos/${Todo.id}`}
+              editPath={`/todo/${Todo.id}`}
               title="Todo"
               onDelete={() => {
                 deleteTodo.mutate(Todo.id);

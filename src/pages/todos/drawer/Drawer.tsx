@@ -11,7 +11,9 @@ export default function TodoDrawer() {
   const [error, setError] = React.useState<undefined | any>(undefined);
   const [isSubmitted, setIsSubmitted] = React.useState<boolean>(false);
 
-  const isCreate: boolean = Hooks.usePath(PRIVATE_ROUTERS.TODO_CREATE_SCREEN.path);
+  const isCreate: boolean = Hooks.usePath(
+    PRIVATE_ROUTERS.TODO_CREATE_SCREEN.path
+  );
 
   const { id } = useParams();
 
@@ -62,7 +64,7 @@ export default function TodoDrawer() {
         !isCreate && {
           title: todoData?.title,
           description: todoData?.description,
-          isActive: todoData?.isActive,
+          completed: todoData?.completed,
         }
       }
     >
@@ -78,17 +80,12 @@ export default function TodoDrawer() {
       >
         <Input />
       </Form.Item>
-      <Form.Item
-        label="Description"
-        name="description"
-        rules={[
-          {
-            required: true,
-            message: "Please input Description!",
-          },
-        ]}
-      >
+      <Form.Item label="Description" name="description">
         <Input.TextArea />
+      </Form.Item>
+
+      <Form.Item label="Completed" name="completed" valuePropName="checked">
+        <Switch checkedChildren="Yes" unCheckedChildren="No" />
       </Form.Item>
 
       {!isCreate && (

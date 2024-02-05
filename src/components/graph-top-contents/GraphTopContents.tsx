@@ -1,8 +1,7 @@
 import * as React from "react";
 import dayjs from "dayjs";
 import { UtilDateHelper } from "@/utils";
-
-const Calendar = React.lazy(() => import("@/components/calendar/Calendar"));
+import Calendar from "@/components/calendar/Calendar"
 
 interface IProps {
   onHandleDate: (date: dayjs.Dayjs | null) => void;

@@ -2,13 +2,10 @@ import * as React from "react";
 import c3 from "c3";
 import ErrorFallbackUI from "@/components/error-boundary/ErrorBoundary";
 
-interface C3DnoutChartProps<T> {
+interface C3DnoutChartProps {
   id: string;
-  columns: Array<T>;
-  title?: string;
-  width?: number;
-  labelShow?: boolean;
-  color?: Array<string>;
+  data: object;
+  donut: object;
   className?: string;
   style?: object;
   dir?: string;
@@ -16,43 +13,26 @@ interface C3DnoutChartProps<T> {
   [x: string]: any;
 }
 
-export default function C3DnoutChart<T>({
+export default function C3DnoutChart({
   id,
-  columns,
-  title = "",
-  width = 30,
-  labelShow = false,
-  color,
+  data,
+  donut,
   className = "",
   style,
   dir = "ltr",
   ...rest
-}: C3DnoutChartProps<T>) {
+}: C3DnoutChartProps) {
   const generateObj: any = {
     bindto: `#${id}`,
-    data: {
-      columns,
-      type: "donut",
-    },
-    donut: {
-      title,
-      width,
-      label: {
-        show: labelShow,
-      },
-    },
+    data: data,
+    donut: donut,
     ...rest,
   };
-
-  if (color && Array.isArray(color)) {
-    generateObj["color"] = {
-      pattern: color,
-    };
-  }
 
   React.useEffect(() => {
     c3.generate(generateObj);
   }, []);
+
   return (
     <ErrorFallbackUI>
       <div id={id} className={className} style={style} dir={dir} />

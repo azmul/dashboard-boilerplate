@@ -40,3 +40,4 @@ You may need to set up secrets in Github first:
 - AWS_REGION
 - CLOUDFRONT_DISTRIBUTION_ID
 # Dashboard-admin-dashboard-fe
+# dashboard-boilerplate
